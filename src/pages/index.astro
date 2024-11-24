@@ -1,0 +1,184 @@
+---
+import Schedule from "../components/Schedule.svelte";
+import Contact from "../components/Contact.svelte";
+import { Image } from "astro:assets";
+import garance1 from "../images/Garance-site-1.jpg";
+import garance2 from "../images/Garance-site-2.jpg";
+import garance3 from "../images/Garance-site-3.jpg";
+
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iti Mana Yoga Studio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Iti Mana Yoga</h1>
+        <p class="subtitle">Studio</p>
+      </header>
+
+      <div class="grid">
+        <section class="presentation">
+          <h2>Présentation</h2>
+          <p>
+            Venez découvrir ou pratiquer le yoga avec Garance, professeur
+            diplômée de yoga vinyasa et yin yoga, dans un cadre joyeux et
+            bienveillant.
+          </p>
+          <Image src={garance2} alt="Garance" />
+
+          <p>
+            Yogi depuis presque 15 ans, c’est au départ à travers les livres et
+            mon oncle adepte de QI gong que le yoga vient à moi. Très vite, des
+            bénéfices comme une meilleure gestion des émotions et une plus
+            grande énergie se fait ressentir. Dès lors, j’ai l’entière
+            conviction que le yoga ne me quittera plus. C’est après avoir flâné
+            quelques studios à Montréal, où je découvre le yoga chaud
+            thérapeutique, et en devenant mère, que je décide d’entreprendre une
+            formation en vinyasa yoga. Terminée en 2019, mon départ à Tahiti me
+            permet de développer ma pratique personnelle, et à mon retour en
+            septembre 2022 je choisis de me former en yin yoga. Avec douceur et
+            bienveillance, pratiquer le yoga en tant que professeur me donne
+            l’intime conviction qu’en plus de developper plus de force, de
+            conscience et de souplesse aux corps, l’amour du partage nous permet
+            de créer quelque chose ensemble en s’offrant du temps
+            individuellement. J’espère vous emmener au plus près de vous même,
+            pour peut-être y trouver un potentiel infini.
+          </p>
+          <Contact client:load />
+        </section>
+
+        <div class="divider"></div>
+
+        <div class="content">
+          <Image src={garance1} alt="Garance" />
+          <Schedule client:load />
+          <Image src={garance3} alt="Garance" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --primary-color: #726646;
+    --background-color: #eae5db;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-family: "Libre Caslon Text", serif;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+  }
+
+  .presentation {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .presentation h2 {
+    font-family: "Libre Caslon Text", serif;
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.15rem;
+  }
+
+  .presentation p {
+    color: var(--primary-color);
+    line-height: 1.6;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 8px 1fr;
+      gap: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .divider {
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: var(--primary-color);
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    .content {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+</style>
