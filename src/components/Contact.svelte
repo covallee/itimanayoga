@@ -1,7 +1,7 @@
 <script>
   let contact = {
     social: {
-      instagram: "itimanayoga",
+      instagram: "https://www.instagram.com/itimanayoga/",
       facebook: "https://www.facebook.com/itimanayoga/",
       email: "itimanayoga@gmail.com",
     },
