@@ -8,7 +8,8 @@
     address: "1 place de la résistance, 64400, Oloron Ste Marie",
     phone: "06.98.98.64.16",
     pricing: {
-      single: "10€",
+      single: "12€",
+      package: "50€",
       trial: "offert",
     },
   };
@@ -69,8 +70,9 @@
 
   <div class="pricing">
     <h3>Tarifs</h3>
-    <p>Cours à l'unité {contact.pricing.single}</p>
-    <p>Cours d'essai {contact.pricing.trial}</p>
+    <p>Cours à l'unité: {contact.pricing.single}</p>
+    <p>Pass 5 cours: {contact.pricing.package} (valable 3 mois)</p>
+    <!-- <p>Cours d'essai {contact.pricing.trial}</p> -->
   </div>
 </div>
 
