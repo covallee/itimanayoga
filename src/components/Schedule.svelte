@@ -1,10 +1,10 @@
 <script>
   let schedule = [
     { day: "lundi", classes: ["vinyasa 1 - 9h30", "vinyasa 2 - 10h45"] },
-    { day: "mardi", classes: ["vinyasa flow - 19h45"] },
+    { day: "mardi", classes: ["vinyasa flow - 19h"] },
     { day: "mercredi", classes: ["yin - 18h"] },
-    { day: "jeudi", classes: ["vinyasa 2 - 19h45"] },
-    { day: "vendredi", classes: ["yin yang - 13h"] },
+    { day: "jeudi", classes: ["vinyasa 2 - 19h30"] },
+    { day: "vendredi", classes: ["yin yang - 12h15"] },
   ];
 </script>
 
