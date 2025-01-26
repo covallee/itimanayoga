@@ -10,7 +10,7 @@
 
 <div class="schedule">
   <h2>Horaires</h2>
-  <ul>
+  <!-- <ul>
     {#each schedule as { day, classes }}
       <li>
         <span class="day">{day}</span>
@@ -19,7 +19,12 @@
         {/each}
       </li>
     {/each}
-  </ul>
+  </ul> -->
+  <div
+    class="momoyoga-schedule"
+    data-momo-schedule="https://www.momoyoga.com/itimanayoga"
+    data-momo-locale="fr"
+  ></div>
 </div>
 
 <style>

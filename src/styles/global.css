@@ -9,3 +9,23 @@
     white-space: nowrap;
     border-width: 0;
   }
+
+  .momoyoga-lesson-line {
+    display: flex;
+    gap: 8px;
+  }
+  .momoyoga-lesson-time {
+    position: unset !important;
+    display: inline-flex !important;
+  }
+  .momoyoga-lesson-title {
+    display: infline-flex !important;
+    margin: unset !important;
+  }
+  .momoyoga-day, .momoyoga-date {
+    color: var(--primary-color) !important;
+  }
+
+  a {
+    color: var(--primary-color);
+  }
