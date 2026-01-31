@@ -7,7 +7,7 @@
     },
     address: "1 place de la résistance, 64400, Oloron Ste Marie",
     newAddress: "La Friche, 5 bis rue de Rocgrand, 64400 Oloron-Sainte-Marie",
-    newAddressDate: "1er mars 2025",
+    newAddressDate: "1er mars 2026",
     phone: "06.98.98.64.16",
     pricing: {
       single: "12€",
