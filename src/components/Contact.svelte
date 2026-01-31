@@ -6,6 +6,8 @@
       email: "itimanayoga@gmail.com",
     },
     address: "1 place de la résistance, 64400, Oloron Ste Marie",
+    newAddress: "La Friche, 5 bis rue de Rocgrand, 64400 Oloron-Sainte-Marie",
+    newAddressDate: "1er mars 2025",
     phone: "06.98.98.64.16",
     pricing: {
       single: "12€",
@@ -64,8 +66,12 @@
   </div>
 
   <address>
-    <h3>Address</h3>
-    {contact.address}
+    <h3>Adresse</h3>
+    <p>{contact.address}</p>
+    <p class="new-address">
+      <strong>À partir du {contact.newAddressDate} :</strong><br />
+      {contact.newAddress}
+    </p>
   </address>
 
   <div class="pricing">
@@ -136,6 +142,13 @@
     margin: 1rem 0;
     font-style: normal;
     color: var(--primary-color);
+  }
+
+  .new-address {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(139, 115, 85, 0.1);
+    border-radius: 8px;
   }
 
   .pricing {
